@@ -1,0 +1,128 @@
+---
+title: "CDSS-COCs-interface"
+author: "Hala"
+date: "2024-05-12"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r}
+library(shiny)
+
+# Define UI
+ui <- fluidPage(
+  titlePanel("CDSS-COCs"),
+  sidebarLayout(
+    sidebarPanel(
+      h4("Criteria:"),
+      radioButtons("V_Leiden_Factor_Mutation", "V Leiden Factor Mutation:", choices = list("Yes" = "yes", "No" = "no")),
+      radioButtons("Personal_History_of_VTE", "Personal History of VTE:", choices = list("Yes" = "yes", "No" = "no")),
+      radioButtons("Family_History_OF_VTE", "Family History of VTE:", choices = list("Yes" = "yes", "No" = "no")),
+      radioButtons("Age_35", "Age ≥35:", choices = list("Yes" = "yes", "No" = "no")),
+      radioButtons("Smoker", "Smoker:", choices = list("Yes" = "yes", "No" = "no")),
+      radioButtons("BMI_25", "BMI >25:", choices = list("Yes" = "yes", "No" = "no")),
+      hr(),
+      selectInput("treatment_purpose", "Treatment Purpose:", choices = c(
+        "Contraception", 
+        "Management of Dysmenorrhea",
+        "Management of DUB (mild/moderate)",
+        "Management of DUB (severe)",
+        "Management of Hypothalamic amenorrhea",
+        "Management of PCO/Polycystic Ovary",
+        "Management of Endometriosis",
+        "Management of Primary Ovary Insufficient"
+      )),
+      hr(),
+      actionButton("submit", "Submit")
+    ),
+    mainPanel(
+      hr(),
+      textOutput("result")
+    )
+  )
+)
+
+# Define Server Logic
+server <- function(input, output) {
+  # Define the criteria lists
+  list_1_criteria <- c("V_Leiden_Factor_Mutation = yes", "Personal_History_of_VTE = yes")
+  list_2_criteria <- c("V_Leiden_Factor_Mutation = no", "Personal_History_of_VTE = no", "Age_35 = no", "BMI_25 = no", "Family_History_OF_VTE = no", "Smoker = no")
+  list_3_criteria <- c("Age_35 = yes", "BMI_25 = yes", "Family_History_OF_VTE = yes", "Smoker = yes")
+
+  # Define treatments
+  primary_treatment <- "Combined Oral Contraceptive (COCs)"
+  primary_treatment_with_monitoring <- "Combined Oral Contraceptive (COCs) with monitoring"
+  alternative_treatments <- list(
+    Contraception = c("POP", "LNG-IUS", "ETG"),
+    Management_of_Dysmenorrhea = c("POP", "DAPA"),
+    Management_of_DUB_mild_moderate = c("Cyclic Continuous Progestin NET"),
+    Management_of_DUB_severe = c("NET", "GNRI-Ia with NET add-back", "LNG-IUS"),
+    Management_of_Hypothalamic_amenorrhea = c("Transdermal E2 and Progestin NET", "MPA"),
+    Management_of_PCO_Polycystic_Ovary = c("POP", "Cyclic progestin", "Metformin"),
+    Management_of_Endometriosis = c("GNRI-Ia and NET add-back", "NET alone", "DAPA"),
+    Management_of_Primary_Ovary_Insufficient = c("Transdermal")
+  )
+  
+  check_criteria <- function() {
+    # Fetch the input values
+    criteria <- list(
+      V_Leiden_Factor_Mutation = input$V_Leiden_Factor_Mutation,
+      Personal_History_of_VTE = input$Personal_History_of_VTE,
+      Family_History_OF_VTE = input$Family_History_OF_VTE,
+      Age_35 = input$Age_35,
+      Smoker = input$Smoker,
+      BMI_25 = input$BMI_25
+    )
+
+    # Construct the string representations
+    criteria_strings <- sapply(names(criteria), function(x) paste(x, "=", criteria[[x]]))
+    
+    # Check positive conditions
+    positive_condition_1 <- any(sapply(list_1_criteria, function(x) x %in% criteria_strings))
+    positive_condition_2 <- all(sapply(list_2_criteria, function(x) x %in% criteria_strings))
+    yes_count <- sum(grepl("yes", criteria_strings))
+    positive_condition_3 <- yes_count == 1
+    positive_condition_4 <- yes_count >= 2
+
+    # Decision making based on conditions
+    if (positive_condition_1) {
+      treatment_purpose <- input$treatment_purpose
+      alternatives <- alternative_treatments[[gsub(" ", "_", treatment_purpose)]]
+      return(paste("Recommended treatments for", treatment_purpose, ":", paste(alternatives, collapse = ", ")))
+    } else if (positive_condition_2) {
+      return(primary_treatment)
+    } else if (positive_condition_3) {
+      return(primary_treatment_with_monitoring)
+    } else if (positive_condition_4) {
+      treatment_purpose <- input$treatment_purpose
+      alternatives <- alternative_treatments[[gsub(" ", "_", treatment_purpose)]]
+      return(paste("Recommended treatments for", treatment_purpose, ":", paste(alternatives, collapse = ", ")))
+    } else {
+      return("Combination of 'Yes' and 'No' selected. Further analysis required.")
+    }
+  }
+
+  observeEvent(input$submit, {
+    output$result <- renderText({
+      result <- check_criteria()
+      paste("Algorithm result:", result)
+    })
+  })
+}
+
+# Run the Shiny app
+shinyApp(ui = ui, server = server)
+
+
+```

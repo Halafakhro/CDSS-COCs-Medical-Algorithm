@@ -1,0 +1,175 @@
+---
+title: "CDSS-COCS"
+author: "Hala"
+date: "2024-05-12"
+output:
+  html_document: default
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r Define the lists of criteria from Table 1}
+# Define the lists of criteria from Table 1
+criteria_data_table <- c("V Leiden Factor Mutation= yes/no", 
+                         "Personal History of VTE= yes/no", 
+                         "Family History OF VTE= yes/no",
+                         "Age = ≥35=yes/no",
+                         "Smoker= yes/no", 
+                         "BMI>25=yes/no")
+
+
+# Define the (list_1_criteria)
+ list_1_criteria <- c("V Leiden Factor Mutation = yes", "Personal History of VTE = yes")
+
+# Check if any of the criteria are present in the data
+positive_condition_1 <- any( list_1_criteria %in% list_1_criteria)
+
+# Output the result
+positive_condition_1
+
+# Define the negative condition
+negative_condition_1 <- ! positive_condition_1
+
+# Output the result
+negative_condition_1
+
+```
+
+```{r}
+
+# Define the (list _2_ criteria)
+list_2_criteria <- c( "V Leiden Factor Mutation = no", "Personal History of VTE = no", "Age = ≥35 = no","BMI>25 = no", "Family History OF VTE = no", "Smoker = no" )
+
+# Check if all of the criteria are present in the data
+positive_condition_2 <- all(list_2_criteria %in%list_2_criteria)
+
+# Check if one or more of the criteria are present in the data
+negative_condition_2 <- !positive_condition_2
+
+# Output the result
+positive_condition_2
+ 
+# Output the result
+negative_condition_2
+
+```
+
+```{r}
+
+# Define the (list_3_ criteria)
+list_3_criteria <- c("Age ≥35 = yes", "BMI > 25 = yes", "Family History OF VTE = yes", "Smoker = yes")
+
+# Count the occurrences of "yes" in the criteria
+yes_count <- sum(grepl("yes", list_3_criteria))
+
+# Check if only one criterion is "yes"
+positive_condition_3 <- yes_count == 1
+
+# Output the result
+positive_condition_3
+
+# Check if more than one of the criteria are present in the data
+negative_condition_3 <- !positive_condition_3
+
+# output the result
+negative_condition_3
+
+```
+
+```{r Define list_4_criteria}
+
+# Define the (list_4_ criteria) which includes two or more yes in list_3_criteria
+list_3_criteria <-c ("Age ≥35 = yes", "BMI > 25 = yes", "Family History OF VTE = yes", "Smoker = yes")
+
+# Count the occurrences of "yes" in the criteria
+yes_count <- sum(grepl("yes", list_3_criteria))
+
+# Check if there are two or more "yes" occurrences
+positive_condition_4 <- yes_count >= 2
+
+# Output the result
+positive_condition_4
+
+```
+
+```{r Define the suggestion treatments}
+# Define the primary treatment
+ primary_treatment <- "Combined_Oral_Contraceptive_COCs"
+
+# Define the primary treatment with monitoring
+ primary_treatment_with_monitoring <- "Combined_Oral_Contraceptive_COCs_with_monitoring"
+
+
+# Define the list of alternative treatments categorized by treatment purpose
+
+alternative_treatments <- list(
+  Contraception = c("POP", "LNG-IUS", "ETG"),
+  `Management of Dysmenorrhea` = c("POP", "DAPA"),
+  `Management of DUB (mild/moderate)` = c("Cyclic Continuous Progestin NET"),
+  `Management of DUB (severe)` = c("NET", "GNRI-Ia with NET add-back", "LNG-IUS"),
+  `Management of Hypothalamic amenorrhea` = c("Transdermal E2 and Progestin NET", "MPA"),
+  `Management of PCO/Polycystic Ovary` = c("POP", "Cyclic progestin", "Metformin"),
+  `Management of Endometriosis` = c("GNRI-Ia and NET add-back", "NET alone", "DAPA"),
+  `Management of Primary Ovary Insufficient` = c("Transdermal")
+)
+ 
+
+```
+
+```{r The CDSS-COCs algorithm flowchart}
+
+# Define function for Step 1
+step_1 <- function(alternative_treatment) {
+  # Return alternative treatments
+  return(alternative_treatments)
+}
+
+# Define function for Step 2
+step_2 <- function(primary_treatment) {
+  # Return primary treatments
+  return(primary_treatments)
+}
+
+# Define function for Step 3
+step_3 <- function(primary_treatment_with_monitoring) {
+  # Return primary treatment with monitoring
+  return(primary_treatment_with_monitoring)
+}
+
+# Define function for Step 4
+step_4 <- function(alternative_treatment) {
+  # Return alternative treatments
+  return(alternative_treatments)
+}
+
+# Process and decision points as per the flowchart
+proposed_system_CDSS_COCs <- function() {
+  # Start of the algorithm
+  start(proposed_system_CDSS_COCs)
+  
+  # Check the Criteria in (list_1_criteria)
+  if (positive_condition_1) {
+    step_1()
+  } else if (positive_condition_2) {
+    step_2()
+  } else if (positive_condition_3) {
+    step_3()
+  } else if (positive_condition_4) {
+    step_4()
+  }
+  
+  # End of the algorithm
+  end()
+}
+
+
+```
