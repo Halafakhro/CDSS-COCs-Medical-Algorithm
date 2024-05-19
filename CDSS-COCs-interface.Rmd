@@ -65,13 +65,13 @@ server <- function(input, output) {
   primary_treatment_with_monitoring <- "Combined Oral Contraceptive (COCs) with monitoring"
   alternative_treatments <- list(
     Contraception = c("POP", "LNG-IUS", "ETG"),
-    Management_of_Dysmenorrhea = c("POP", "DAPA"),
-    Management_of_DUB_mild_moderate = c("Cyclic Continuous Progestin NET"),
-    Management_of_DUB_severe = c("NET", "GNRI-Ia with NET add-back", "LNG-IUS"),
-    Management_of_Hypothalamic_amenorrhea = c("Transdermal E2 and Progestin NET", "MPA"),
-    Management_of_PCO_Polycystic_Ovary = c("POP", "Cyclic progestin", "Metformin"),
-    Management_of_Endometriosis = c("GNRI-Ia and NET add-back", "NET alone", "DAPA"),
-    Management_of_Primary_Ovary_Insufficient = c("Transdermal")
+    `Management of Dysmenorrhea` = c("POP", "DAPA"),
+    `Management of DUB (mild/moderate)` = c("Cyclic Continuous Progestin NET"),
+    `Management of DUB (severe)` = c("NET", "GNRI-Ia with NET add-back", "LNG-IUS"),
+    `Management of Hypothalamic amenorrhea` = c("Transdermal E2 and Progestin NET", "MPA"),
+    `Management of PCO/Polycystic Ovary` = c("POP", "Cyclic progestin", "Metformin"),
+    `Management of Endometriosis` = c("GNRI-Ia and NET add-back", "NET alone", "DAPA"),
+    `Management of Primary Ovary Insufficient` = c("Transdermal")
   )
   
   check_criteria <- function() {
@@ -98,16 +98,16 @@ server <- function(input, output) {
     # Decision making based on conditions
     if (positive_condition_1) {
       treatment_purpose <- input$treatment_purpose
-      alternatives <- alternative_treatments[[gsub(" ", "_", treatment_purpose)]]
-      return(paste("Recommended treatments for", treatment_purpose, ":", paste(alternatives, collapse = ", ")))
+      alternatives <- alternative_treatments[[treatment_purpose]]
+      return(paste("Recommended treatments:", paste(alternatives, collapse = ", ")))
     } else if (positive_condition_2) {
       return(primary_treatment)
     } else if (positive_condition_3) {
       return(primary_treatment_with_monitoring)
     } else if (positive_condition_4) {
       treatment_purpose <- input$treatment_purpose
-      alternatives <- alternative_treatments[[gsub(" ", "_", treatment_purpose)]]
-      return(paste("Recommended treatments for", treatment_purpose, ":", paste(alternatives, collapse = ", ")))
+      alternatives <- alternative_treatments[[treatment_purpose]]
+      return(paste("Recommended treatments:", paste(alternatives, collapse = ", ")))
     } else {
       return("Combination of 'Yes' and 'No' selected. Further analysis required.")
     }
