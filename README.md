@@ -28,3 +28,98 @@ Table 3: Flowchart of the Proposed System CDSS-COCs
 Table 4: Screenshot of the Prototype System
 Conclusion
 CDSS-COCs is designed to provide clinicians with precise recommendations for hormonal treatment, considering six major risk factors: BMI, Age, Smoking, Personal History of VTE, Family History of VTE, and the genetic factor V Leiden Mutation. By identifying patients at a higher risk of VTE during COCs treatment, the system aims to reduce VTE incidences among COCs users. This structured approach ensures that each patient receives a personalized assessment, leading to safer and more effective treatment decisions.
+
+References
+[1] H. L. Thacker, “Hormone Therapy and the Risk of Venous Thromboembolism,”2014, 
+2016.
+[2] D. a Brown and C. M. Vartan, “Risk of venous thromboembolism with drospirenonecontaining oral contraceptives,” Am. J. Health. Syst. Pharm, 2011.
+[3] J. Brynhildsen, “Combined hormonal contraceptives: prescribing patterns, compliance, 
+and benefits versus risks.” Ther. Adv. drug Saf, 2014.
+[4] A. Pearson, A. Moxey, J. Robertson, I. Hains, M. Williamson, J. Reeve, and D. 
+Newby, “Do computerized clinical decision support systems for prescribing change 
+practice? A systematic review of the literature (1990-2007).” BMC Health Serv, 2009.
+[5] S. Christin-Maitre, “History of oral contraceptive drugs and their use worldwide,” Best 
+Pract. Res. Clin. Endocrinol. Metab, 2013.
+[6] M. Conrad Stöppler, “Article ‘Birth Control Pills (Oral Contraceptives).” 
+www.medicinet.com.
+[7] Dawn Stacey, PhD, LMHC, July 14, 2016, Types of Combination Birth Control Pills 
+Differences Between Monophasic, Biphasic and Triphasic Pills 
+https://www.verywell.com/types-of-combination-pills-906935
+[8] Trussell J, Contraceptive failure in the United States, Contraception, 2011
+[9] A. E. Schindler, “Non-contraceptive benefits of oral hormonal contraceptives,” Int. J. 
+Endocrinol. Metab, 2013.
+[10] M. Serrani and J. T. Jensen, “Noncontraceptive benefits of the estradiol valerate / 
+dienogest combined oral contraceptive : a review of the literature,” Int. J. Womens. Health, 
+2014.
+[11] T. W. Wakefield, D. D. Myers, and P. K. Henke, “Mechanisms of venous thrombosis 
+and resolution,” Arterioscler. Thromb. Vasc. Biol, 2008.
+[12] “American Heart Association, Venous-Thromboembolism-VTE_UCM_479052_Article 
+@ www.heart.org, March (2017).”
+http://www.heart.org/HEARTORG/Conditions/VascularHealth/VenousThromboembolism/
+Venous-Thromboembolism-VTE_UCM_479052_Article.jsp
+[13] J. A. Heit, F. A. Spencer, and R. H. White, “The epidemiology of venous 
+thromboembolism,” J. Thromb. Thrombolysis, 2016.
+[14] F. Editor-in-Chief Anthony J. Busti, MD, PharmD, FNLA and C. Reviewers: Jon D. 
+Herrington, PharmD, BCPS, BCOP and Donald S. Nuzum, PharmD, BCACP, “oralcontraceptive-clotting-factors-thrombosis-dvt-pe @ www.ebmconsult.com:” 
+[15] E. S. Berner, “Clinical decision support systems: state of the art,” Agency Healthc. Res. 
+Qual, 2009.
+[16] S. L. Tiffen J1, Corbridge SJ2, “Enhancing clinical decision making: development of a 
+contiguous definition and conceptual framework.” NCPI US National Library of Medicine 
+National Institutes of Health Search database Search term, 2014.
+[17] I. Sim, P. Gorman, R. Greenes, and R. Haynes, “Clinical decision support systems for 
+the practice of evidence-based medicine,”2001.
+73
+[18] D. F. Sittig, A. Wright, J. A. Osheroff, B. Middleton, J. M. Teich, J. S. Ash, E. 
+Campbell, and D. W. Bates, “Grand challenges in clinical decision support,” J. Biomed. 
+Inform, 2008.
+[19] Commission European, “Country Brief : Finland,” 2010.
+[20] Cohen D, Crabtree B. "Qualitative Research Guidelines Project." 2006. 
+http://www.qualres.org/HomeUnst-3630.html
+[21] A. Steckler, K. R. McLeroy, R. M. Goodman, S. T. Bird, and L. McCormick, “Toward 
+integrating qualitative and quantitative methods: an introduction,” Health Educ. Q, 1992.
+[22] EbMeDs, “scripts @ www.ebmeds.org/Reducing the risk of thrombosis in patients on 
+hormone replacement therapy.” EbMeDs, 2016.
+[23] Mehilainen Oy, “ en @ www.mehilainen.fi.” https://www.mehilainen.fi/en
+[24] Norwegian Institute of Public Health, G. Framework, “GUIDES,” Nor. Inst. Public 
+Health
+[25] J. L. Kujovich, “Factor V Leiden Thrombophilia.” Genet. Med., 2011.
+[26] K. W. Bloemenkamp, F. R. Rosendaal, F. M. Helmerhorst, H. R. Büller, and J. P. 
+Vandenbroucke, “Enhancement by factor V Leiden mutation of risk of deep-vein 
+thrombosis associated with oral contraceptives containing a third-generation progestagen,” 
+Lancet, 1995.
+[27] L. Kovacs, “Oral contraception over the age of 40,” Ann N Y Acad Sci, 2003.
+[28] M. A. Stenchever, “Risks of oral contraceptive use in women over 35.” J. Reprod. 
+Med., 1993.
+[29] A. L. Nightingale, R. A. Lawrenson, E. L. Simpson, T. J. Williams, K. D. MacRae, and 
+R. D. Farmer, “The effects of age, body mass index, smoking and general health on the risk 
+of venous thromboembolism in users of combined oral contraceptives.,” Eur. J. Contracept. 
+Reprod. Health Care, 2000.
+[30] Centers of disease control, “Body mass index: Considerations for practitioners,” 2011.
+[31] K. A. L. Darvall, R. C. Sam, S. H. Silverman, A. W. Bradbury, and D. J. Adam, 
+“Obesity and Thrombosis,” Eur. J. Vasc. Endovasc. Surg., 2007.
+[32] E. R. Pomp, S. Le Cessie, F. R. Rosendaal, and C. J. M. Doggen, “Risk of venous 
+thrombosis: Obesity and its joint effect with oral contraceptive use and prothrombotic 
+mutations,” Br. J. Haematol., 2007.
+[33] J. T. Powell, “Vascular damage from smoking: disease mechanisms at the arterial wall.” 
+Vasc. Med, 1998.
+[34] V. Tzankova, V. Petrov, and N. Danchev, “Impact of Oral Contraceptives and Smoking 
+on Arterial and Deep Venous Thrombosis: A Retrospective Case-Control Study,” 
+Biotechnol. Biotechnol. Equip, 2014. 
+[35] G. Hron, S. Eichinger, A. Weltermann, E. Minar, C. Bialonczyk, M. Hirschl, M. Stain, 
+V. Gartner, and P. A. Kyrle, “Family history for venous thromboembolism and the risk for 
+recurrence.,” Am. J. Med., 2006.
+[36] A. L. Horton, V. Momirova, D. Dizon-Townson, K. Wenstrom, G. Wendel, P. Samuels, 
+B. Sibai, C. Y. Spong, M. Cotroneo, Y. Sorokin, M. Miodovnik, M. J. O’Sullivan, D. 
+Conway, and R. J. Wapner, “Family history of venous thromboembolism and identifying 
+factor V Leiden carriers during pregnancy.,” Obstet. Gynecol., 2010.
+74
+[37] C. C. Trenor, R. J. Chung, A. D. Michelson, E. J. Neufeld, C. M. Gordon, M. R. Laufer, 
+and S. J. Emans, “Hormonal Contraception and Thrombotic Risk: A Multidisciplinary 
+Approach,” Pediatrics, 2011.
+[38] Y. Vinogradova, C. Coupland, and J. Hippisley-Cox, “Exposure to combined oral 
+contraceptives and risk of venous thromboembolism: a protocol for nested case-control 
+studies using the Q Research and the CPRD databases.” BMJ Open, 2014.
+[39] R. E. J. Roach, W. M. Lijfering, A. V. H. Vlieg, F. M. Helmerhorst, F. R. Rosendaal, 
+and S. C. Cannegieter, “The risk of venous thrombosis in individuals with a history of 
+superficial vein thrombosis and acquired venous thrombotic risk factors,” 2015.
+[40] Healthit.gov, “Measure Effects and Refine CDS Interventions,” 2011.
