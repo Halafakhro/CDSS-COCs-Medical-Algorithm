@@ -112,7 +112,6 @@ recurrence.,” Am. J. Med., 2006.
 B. Sibai, C. Y. Spong, M. Cotroneo, Y. Sorokin, M. Miodovnik, M. J. O’Sullivan, D. 
 Conway, and R. J. Wapner, “Family history of venous thromboembolism and identifying 
 factor V Leiden carriers during pregnancy.,” Obstet. Gynecol., 2010.
-74
 [37] C. C. Trenor, R. J. Chung, A. D. Michelson, E. J. Neufeld, C. M. Gordon, M. R. Laufer, 
 and S. J. Emans, “Hormonal Contraception and Thrombotic Risk: A Multidisciplinary 
 Approach,” Pediatrics, 2011.
