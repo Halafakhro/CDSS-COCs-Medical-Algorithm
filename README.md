@@ -29,6 +29,18 @@ Table 4: Screenshot of the Prototype System
 Conclusion
 CDSS-COCs is designed to provide clinicians with precise recommendations for hormonal treatment, considering six major risk factors: BMI, Age, Smoking, Personal History of VTE, Family History of VTE, and the genetic factor V Leiden Mutation. By identifying patients at a higher risk of VTE during COCs treatment, the system aims to reduce VTE incidences among COCs users. This structured approach ensures that each patient receives a personalized assessment, leading to safer and more effective treatment decisions.
 
+ Patent Pending
+
+This algorithm is part of a patented invention filed with the United States Patent and Trademark Office (USPTO).
+Title: Clinical Decision Support System for Risk Stratification and Safe Prescription of Combined Oral Contraceptives  
+USPTO Application No.: 63/842,303  
+Filing Date: July 11, 2025  
+Inventor: Hala Fakhro  
+Status: Provisional Patent — Patent Pending
+
+Unauthorized use or reproduction of this system may be subject to legal consequences. For licensing inquiries, please contact the inventor directly.
+
+
 References
 [1] H. L. Thacker, “Hormone Therapy and the Risk of Venous Thromboembolism,”2014, 
 2016.
