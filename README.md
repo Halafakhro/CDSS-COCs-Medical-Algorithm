@@ -1,4 +1,5 @@
 Abstract
+
 Background: The implementation of evidence-based clinical decision support systems (CDSS) has shown significant potential to enhance the safety, quality, and efficiency of healthcare services, as well as patient outcomes. This research explored the development of a Clinical Decision Support System for prescribing Combined Oral Contraceptives (CDSS-COCs) to reduce the incidence of venous thromboembolism (VTE) among users. The system is based on guidelines from the World Health Organization (WHO), the UK Medical Eligibility Criteria for Contraceptive Use (UKMEC), and the Centers for Disease Control and Prevention (CDC). Additionally, the feasibility of integrating this system into the Health Information System (HIS) in Finland was evaluated.
 
 Methodology: A narrative literature review was conducted using Google Scholar, PubMed, Mendeley, and databases from Tallinn University of Technology and Tampere University of Technology. Both quantitative and qualitative methods were employed, including in-depth semi-structured interviews with an application developer and expert clinician, and online and paper-based questionnaires among prospective users.
